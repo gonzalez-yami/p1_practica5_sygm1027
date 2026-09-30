@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Horario 5J</title>
+  
+  <!-- Cómo se va a ver la página -->
+  <style>
+    /* Configuración para toda la página */
+    body {
+      font-family: Arial, sans-serif; /* Tipo de letra común y fácil de leer */
+      background-color: #f8fafc;     /* Color del fondo de la pantalla */
+      padding: 20px;                  /* Espacio alrededor del contenido */
+      color: #1e293b;                 /* Color del texto principal */
+    }
+
+    /* Estilo para el título */
+    h2 {
+      text-align: center;            /* Alinea el texto al centro */
+      color: #581c87;                 /* Color morado oscuro */
+      margin-bottom: 15px;            /* Separa el título de la tabla */
+      font-size: 22px;                /* Tamaño de la letra del título */
+    }
+
+    /* Estilo para la tabla */
+    table {
+      width: 100%;                     /* La tabla ocupa el ancho disponible */
+      max-width: 850px;                /* Ancho máximo para que no se vea gigante */
+      margin: 0 auto;                  /* Centra la tabla en la pantalla */
+      border-collapse: collapse;       /* Quita los espacios dobles entre los bordes */
+      background-color: #ffffff;       /* Fondo blanco para la tabla */
+      border: 2px solid #cbd5e1;       /* Borde exterior recto y firme */
+    }
+
+    /* Estilo para los encabezados */
+    th {
+      background-color: #e2e8f0;       /* Color de fondo para los días */
+      color: #0f172a;                 /* Color de la letra de los días */
+      padding: 10px;                  /* Relleno para que no quede pegado */
+      font-size: 14px;                /* Tamaña de letra */
+      border: 1px solid #94a3b8;       /* Límite de las celdas */
+    }
+
+    /* Estilo para cada celda con las materias y horas */
+    td {
+      padding: 8px;                   /* Espacio dentro de la casilla */
+      text-align: center;             /* Texto centrado dentro de cada celda */
+      font-size: 12px;                /* Tamaño de letra para el contenido */
+      border: 1px solid #cbd5e1;       /* Bordes rectos entre celdas */
+    }
+
+    /* Estilo especial para la columna de las horas */
+    .hora {
+      background-color: #f1f5f9;
+      color: #334155;
+      font-weight: bold;              /* Letra en negrita */
+    }
+
+    /* Estilo especial para la fila del RECREO */
+    .recreo {
+      background-color: #f1f5f9;
+      color: #475569;
+      font-weight: bold;
+      letter-spacing: 3px;           /* Separa un poco las letras del texto */
+    }
+
+    /* --- AQUÍ SE DEFINEN LOS COLORES  --- */
+    .salmon { background-color: #ffb3ba; color: #7f1d1d; }   /* Rosa Salmón (PROG M4S1) */
+    .morado { background-color: #d8b4fe; color: #3b0764; }   /* Morado (5° FS) */
+    .azul { background-color: #7dd3fc; color: #0c4a6e; }     /* Azul Cielo (5° TSdM 2) */
+    .amarillo { background-color: #fef08a; color: #713f12; } /* Amarillo (5° CH 2) */
+    .verde { background-color: #86efac; color: #14532d; }    /* Verde (5° Ingles 5) */
+    .naranja { background-color: #fdba74; color: #7c2d12; }  /* Naranja (5° Apli. Adm) */
+    .gris { background-color: #cbd5e1; color: #1e293b; }     /* Gris (PROG M4S2) */
+    .rojo { background-color: #fca5a5; color: #881337; }     /* Rojo Coral (5° CNEyT 5) */
+
+    /* Reglas para dar formato al nombre de la materia y al profe */
+    b { display: block; font-size: 13px; margin-bottom: 2px; } /* Texto en negrita para la materia */
+    span { font-size: 11px; opacity: 0.85; }                   /* Letra más pequeña para el profe */
+
+    /* Estilo para tu nombre en el pie de página */
+    .firma {
+      text-align: center;             /* Centra tu nombre */
+      margin-top: 20px;               /* Separa tu nombre de la tabla */
+      font-size: 14px;                /* Tamaña de la letra */
+      font-weight: bold;              /* Letra remarcada */
+      color: #6b21a8;                 /* Color morado lindo */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TÍTULO DE LA PÁGINA -->
+  <h2>Horario Grupo 5J</h2>
+
+  <!-- AQUÍ EMPIEZA LA TABLA  -->
+  <table>
+    <thead>
+      <!-- Fila superior con los días de la semana -->
+      <tr>
+        <th>Hora</th>
+        <th>Lunes</th>
+        <th>Martes</th>
+        <th>Miércoles</th>
+        <th>Jueves</th>
+        <th>Viernes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Primera hora del día -->
+      <tr>
+        <td class="hora">07:00 - 08:00</td>
+        <td></td>
+        <td class="amarillo"><b>5° CH 2</b><span>Juárez</span></td>
+        <td class="naranja"><b>5° Apli. Adm</b><span>Estrada</span></td>
+        <td class="naranja"><b>5° Apli. Adm</b><span>Estrada</span></td>
+        <td class="verde"><b>5° Ingles 5</b><span>Terrazas</span></td>
+      </tr>
+      
+      <!-- Segunda hora -->
+      <tr>
+        <td class="hora">08:00 - 09:00</td>
+        <td></td>
+        <td class="naranja"><b>5° Apli. Adm</b><span>Estrada</span></td>
+        <td class="amarillo"><b>5° CH 2</b><span>Juárez</span></td>
+        <td class="verde"><b>5° Ingles 5</b><span>Terrazas</span></td>
+        <td class="amarillo"><b>5° CH 2</b><span>Juárez</span></td>
+      </tr>
+
+      <!-- Tercera hora (Uso de rowspan para unir 2 celdas hacia abajo cuando la materia dura 2 horas) -->
+      <tr>
+        <td class="hora">09:00 - 10:00</td>
+        <td class="verde"><b>5° Ingles 5</b><span>Terrazas</span></td>
+        <td class="salmon" rowspan="2"><b>PROG M4S1</b><span>Meza</span></td>
+        <td class="salmon"><b>PROG M4S1</b><span>Meza</span></td>
+        <td class="salmon" rowspan="2"><b>PROG M4S1</b><span>Meza</span></td>
+        <td class="salmon" rowspan="2"><b>PROG M4S1</b><span>Meza</span></td>
+      </tr>
+
+      <!-- Cuarta hora -->
+      <tr>
+        <td class="hora">10:00 - 10:50</td>
+        <td class="rojo"><b>5° CNEyT 5</b><span>Reyes</span></td>
+        <td class="verde"><b>5° Ingles 5</b><span>Terrazas</span></td>
+      </tr>
+
+      <!-- Fila del Receso (colspan="6" hace que abarque las 6 columnas) -->
+      <tr>
+        <td colspan="6" class="recreo">RECREO</td>
+      </tr>
+
+      <!-- Quinta hora -->
+      <tr>
+        <td class="hora">11:10 - 12:00</td>
+        <td class="gris"><b>PROG M4S2</b><span>Gonzales A</span></td>
+        <td class="gris"><b>PROG M4S2</b><span>Gonzales A</span></td>
+        <td class="rojo" rowspan="2"><b>5° CNEyT 5</b><span>Reyes</span></td>
+        <td class="gris" rowspan="2"><b>PROG M4S2</b><span>Gonzales A</span></td>
+        <td class="rojo"><b>5° CNEyT 5</b><span>Reyes</span></td>
+      </tr>
+
+      <!-- Sexta hora -->
+      <tr>
+        <td class="hora">12:00 - 13:00</td>
+        <td class="morado"><b>5° FS</b><span>Meza</span></td>
+        <td class="verde"><b>5° Ingles 5</b><span>Terrazas</span></td>
+        <td class="gris"><b>PROG M4S2</b><span>Gonzales A</span></td>
+      </tr>
+
+      <!-- Última hora del día -->
+      <tr>
+        <td class="hora">13:00 - 14:00</td>
+        <td class="azul"><b>5° TSdM 2</b><span>Macias</span></td>
+        <td class="azul"><b>5° TSdM 2</b><span>Macias</span></td>
+        <td class="azul"><b>5° TSdM 2</b><span>Macias</span></td>
+        <td class="azul"><b>5° TSdM 2</b><span>Macias</span></td>
+        <td class="azul"><b>5° TSdM 2</b><span>Macias</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- NOMBRE  -->
+  <div class="firma">
+     Sofía Yamileth González Mares 1027
+  </div>
+
+</body>
+</html>
